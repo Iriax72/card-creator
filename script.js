@@ -13,7 +13,7 @@ const forms = [
 
 confirmButton.addEventListener("click", (e) => {
     e.preventDefault();
-    if(confirm("Attention, si vous changer de carte, les données acutelles seront effacées. Voulez vous tout de meme continuer ?")) {
+    if(confirm("Attention, si vous changez de carte, les données acutelles seront effacées. Voulez vous tout de meme continuer ?")) {
         memoryValue = typeSelect.value;
         afficher(typeSelect.value);
     } else {
@@ -24,7 +24,7 @@ confirmButton.addEventListener("click", (e) => {
 function afficher(formName) {
     const formId = formName + "-form";
     forms.forEach(form => {
-        if (form.id = formId) {
+        if (form.id === formId) {
             form.style.display = 'block';
         } else {
             form.style.display = 'none';
