@@ -15,17 +15,14 @@ confirmButton.addEventListener("click", (e) => {
     e.preventDefault();
     if(confirm("Attention, si vous changer de carte, les données acutelles seront effacées. Voulez vous tout de meme continuer ?")) {
         memoryValue = typeSelect.value;
-        alert(memoryValue)
         afficher(typeSelect.value);
-        alert("afficher() effectué")
     } else {
         typeSelect.value = memoryValue;
     }
 })
 
 function afficher(formName) {
-    const formId = "#" + formName + "-form";
-    alert(formId)
+    const formId = formName + "-form";
     forms.forEach(form => {
         if (form.id = formId) {
             form.style.display = 'block';
