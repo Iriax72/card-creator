@@ -1,0 +1,76 @@
+.card-div img {
+    width: 100vw;
+    height: auto;
+}
+
+.card-div form #cout {
+    position: absolute;
+    top: 60px;
+    left: 38px;
+}
+
+.card-div form #titre {
+    position: absolute;
+    top: 65px;
+    left: 80px;
+}
+
+.card-div form #artiste {
+    position: absolute;
+    top: 580px;
+    left: 30px;
+}
+
+.card-div form #rarete {
+    position: absolute;
+    top: 580px;
+    left: 295px;
+}
+
+.card-div form #number {
+    position: absolute;
+    top: 580px;
+    left: 350px;
+}
+
+.card-div form #maxnum {
+    position: absolute;
+    top: 580px;
+    left: 370px;
+}
+
+.card-div form #pv-unit {
+    position: absolute;
+    top: 390px;
+    left: 370px;
+}
+
+.card-div form #degats-unit {
+    position: absolute;
+    top: 390px;
+    left: 40px;
+}
+
+.card-div form #zone-unit {
+    position: absolute;
+    top: 43px;
+    left: 135px;
+}
+
+.card-div form #art-unit {
+    position: absolute;
+    top: 120px;
+    left: 150px;
+}
+
+.card-div form #motcle-unit {
+    position: absolute;
+    top: 390px;
+    left: 100px;
+}
+
+.card-div form #effet-unit {
+    position: absolute;
+    top: 435px;
+    left: 140px;
+}
