@@ -20,11 +20,11 @@
         <div id="unit" class="card-div">
             <img src="./assets/unit.png" alt="image de base pour la carte"></img>
             <form action="" id="unit-form">
-                <select name="zone" id="zone">
+                <select name="zone" if="zone-unit">
                     <option value="TERRESTRE">TERRESTRE</option>
                     <option value="SPATIAL">SPATIAL</option>
                 </select>
-                <input type="number" name="cout" value="3">
+                <input type="number" name="cout" value="3" id="cout-unit">
                 <input type="text" name="titre" placeholder="Titre">
                 <input type="image" name="art">
                 <input type="number" name="degats" value="2">

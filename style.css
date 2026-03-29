@@ -2,3 +2,15 @@
     width: 100vw;
     height: auto;
 }
+
+.card-div form #zone-unit {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+}
+
+.card-div form #cout-unit {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
