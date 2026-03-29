@@ -11,7 +11,7 @@
 
 .card-div form #titre {
     position: absolute;
-    top: 70px;
+    top: 65px;
     left: 80px;
 }
 
@@ -41,20 +41,20 @@
 
 .card-div form #pv-unit {
     position: absolute;
-    top: 380px;
+    top: 390px;
     left: 370px;
 }
 
 .card-div form #degats-unit {
     position: absolute;
-    top: 380px;
+    top: 390px;
     left: 40px;
 }
 
 .card-div form #zone-unit {
     position: absolute;
-    top: 45px;
-    left: 75px;
+    top: 43px;
+    left: 135px;
 }
 
 .card-div form #art-unit {
@@ -65,12 +65,12 @@
 
 .card-div form #motcle-unit {
     position: absolute;
-    top: 380px;
+    top: 390px;
     left: 100px;
 }
 
 .card-div form #effet-unit {
     position: absolute;
-    top: 450px;
+    top: 435px;
     left: 140px;
 }
