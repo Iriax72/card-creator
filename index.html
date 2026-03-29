@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Creator</title>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <main>
+        <form action="">
+            <select name="typeOfCard" id="typeOfCard-select">
+                <option value="unit">UNITÉ</option>
+                <option value="event">ÉVENEMENT</option>
+                <option value="amelio">AMÉLIORATION</option>
+            </select>
+            <button type="sumbit" id="confirm-btn">CONFIRMER</button>
+        </form>
         <div id="unit">
             <img src="./assets/unit.png" alt="image de base pour la carte"></img>
-            <form action="">
+            <form action="" id="unit-form">
                 <select name="zone" id="zone">
                     <option value="TERRESTRE">TERRESTRE</option>
                     <option value="SPATIAL">SPATIAL</option>
@@ -29,7 +38,7 @@
         </div>
         <div id="event">
             <img src="./assets/event.png" alt="image de base pour la carte">
-            <form action="">
+            <form action="" id="event-form">
                 <input type="numer" name="cout" value="1">
                 <input type="text" name="titre" placeholder="Titre">
                 <input type="text" name="motcle" placeholder="mots-clés">
@@ -43,7 +52,7 @@
         </div>
         <div id="amelio">
             <img src="./assets/amelio.png" alt="image de base pour la carte">
-            <form action="">
+            <form action="" id="amelio-form">
                 <input type="number" name="cout" value="2">
                 <input type="text" name="titre" placeholder="Titre">
                 <input type="image" name="art">
