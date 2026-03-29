@@ -11,6 +11,8 @@ const divs = [
     document.querySelector("#amelio")
 ];
 
+afficher('unit');
+
 confirmButton.addEventListener("click", (e) => {
     e.preventDefault();
     if(confirm("Attention, si vous changez de carte, les données acutelles seront effacées. Voulez vous tout de meme continuer ?")) {
