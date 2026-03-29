@@ -5,10 +5,10 @@ let memoryValue = typeSelect.value;
 
 const confirmButton = document.querySelector("#confirm-btn");
 
-const forms = [
-    document.querySelector("#unit-form"),
-    document.querySelector("#event-form"),
-    document.querySelector("#amelio-form")
+const divs = [
+    document.querySelector("#unit"),
+    document.querySelector("#event"),
+    document.querySelector("#amelio")
 ];
 
 confirmButton.addEventListener("click", (e) => {
@@ -21,13 +21,12 @@ confirmButton.addEventListener("click", (e) => {
     }
 })
 
-function afficher(formName) {
-    const formId = formName + "-form";
-    forms.forEach(form => {
-        if (form.id === formId) {
-            form.style.display = 'block';
+function afficher(divName) {
+    divs.forEach(div => {
+        if (div.id === divName) {
+            div.style.display = 'block';
         } else {
-            form.style.display = 'none';
+            div.style.display = 'none';
         }
     })
 }
