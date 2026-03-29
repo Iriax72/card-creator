@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Creator</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
             </select>
             <button type="sumbit" id="confirm-btn">CONFIRMER</button>
         </form>
-        <div id="unit">
+        <div id="unit" class="card-div">
             <img src="./assets/unit.png" alt="image de base pour la carte"></img>
             <form action="" id="unit-form">
                 <select name="zone" id="zone">
@@ -36,7 +37,7 @@
                 <input type="number" name="maxnum" value="252">
             </form>
         </div>
-        <div id="event">
+        <div id="event" class="card-div">
             <img src="./assets/event.png" alt="image de base pour la carte">
             <form action="" id="event-form">
                 <input type="numer" name="cout" value="1">
@@ -50,7 +51,7 @@
                 <input type="number" name="maxnum" placeholder="252">
             </form>
         </div>
-        <div id="amelio">
+        <div id="amelio" class="card-div">
             <img src="./assets/amelio.png" alt="image de base pour la carte">
             <form action="" id="amelio-form">
                 <input type="number" name="cout" value="2">
