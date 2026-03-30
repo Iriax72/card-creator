@@ -4,30 +4,32 @@ const submitBtns = [
     document.querySelector("#amelio-submit")
 ];
 
-const baseImg = [...document.querySelectorAll("img")].filter(img => img.style.display !== "none");
+const baseImg = [...document.querySelectorAll("img")].find(img => img.offsetParent !== null) || document.querySelector("img");
+if (!baseImg) {
+    console.error("Aucune image de carte trouvée.");
+} else {
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = baseImg.naturalWidth || baseImg.width;
+    canvas.height = baseImg.naturalHeight || baseImg.height;
+    ctx.drawImage(baseImg, 0, 0);
+    ctx.font = "20px Arial";
+    ctx.fillStyle = "white";
 
-const canvas = document.createElement("canvas");
-const ctx = canvas.getContext("2d");
-canvas.width = baseImg.width;
-canvas.height = baseImg.height;
+    submitBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
 
-ctx.drawImage(baseImg, 0, 0);
-ctx.font = "20px Arial";
-ctx.fillStyle = "white";
+            if (confirm("Voulez-vous télécharger votre carte ?")) {
+                const dataURL = canvas.toDataURL("image/png");
 
-submitBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        if (confirm("Voulez cous télécharger votre carte ?")) {
-            const dataURL = canvas.toDataURL("image/png");
-
-            const a = document.createElement("a");
-            a.href = dataURL;
-            a.setAttribute("download", "votre-carte.png");
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    })
-})
+                const a = document.createElement("a");
+                a.href = dataURL;
+                a.setAttribute("download", "votre-carte.png");
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+        });
+    });
+}
