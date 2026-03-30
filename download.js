@@ -22,9 +22,11 @@ if (!baseImg) {
 
             if (confirm("Voulez-vous télécharger votre carte ?")) {
                 const dataURL = canvas.toDataURL("image/png");
+                const blob = await fetch(dataURL).then(res => res.blob());
+                const url = URL.createObjectURL(blob);
 
                 const a = document.createElement("a");
-                a.href = dataURL;
+                a.href = url;
                 a.setAttribute("download", "votre-carte.png");
                 document.body.appendChild(a);
                 a.click();
