@@ -1,8 +1,8 @@
-const submitBtns = {
-    unit: document.querySelector("#unit-submit"),
-    event: document.querySelector("#event-submit"),
-    amelio: document.querySelector("#amelio-submit")
-}
+const submitBtns = [
+    document.querySelector("#unit-submit"),
+    document.querySelector("#event-submit"),
+    document.querySelector("#amelio-submit")
+];
 
 const baseImg = [...document.querySelectorAll("img")].filter(img => img.style.display !== "none");
 
