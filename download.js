@@ -19,13 +19,15 @@ submitBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const dataURL = canvas.toDataURL("image/png");
+        if (confirm("Voulez cous télécharger votre carte ?")) {
+            const dataURL = canvas.toDataURL("image/png");
 
-        const a = document.createElement("a");
-        a.href = dataURL;
-        a.setAttribute("download", "votre-carte.png");
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+            const a = document.createElement("a");
+            a.href = dataURL;
+            a.setAttribute("download", "votre-carte.png");
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
     })
 })
