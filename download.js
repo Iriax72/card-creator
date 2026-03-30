@@ -17,21 +17,24 @@ if (!baseImg) {
     ctx.fillStyle = "white";
 
     submitBtns.forEach(btn => {
-        btn.addEventListener("click", (e) => {
+        btn.addEventListener("click", async (e) => {
             e.preventDefault();
 
-            if (confirm("Voulez-vous télécharger votre carte ?")) {
-                const dataURL = canvas.toDataURL("image/png");
-                const blob = await fetch(dataURL).then(res => res.blob());
-                const url = URL.createObjectURL(blob);
-
-                const a = document.createElement("a");
-                a.href = url;
-                a.setAttribute("download", "votre-carte.png");
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
+            if (!confirm("Voulez-vous télécharger votre carte ?")) {
+                return;
             }
+
+            const dataURL = canvas.toDataURL("image/png");
+            const blob = await (await fetch(dataURL)).blob();
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.setAttribute("download", "votre-carte.png");
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         });
     });
 }
